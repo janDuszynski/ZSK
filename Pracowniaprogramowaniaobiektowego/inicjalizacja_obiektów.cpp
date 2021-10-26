@@ -3,36 +3,62 @@
 using namespace std;
 
 class Worker{
+	
 	public:
-		int id{8};
-		string name {"Katarzyna"};
-		string surname {"Katarzyna"};
 		
-		Worker();
-		Worker(int pId, string pName, string pSurname);
+		unsigned int id {420};
+		string name {"Janina"}, surname {"B¹bel"};
 		
 		void getData();
+		
+		//Worker();
+		Worker(int id = 589, string name = "Specyfikcja", string surname = "Musi byæ");
+	
 };
 
-Worker::Worker(){
-	id=13;
-	name="KATARZYNA";
-	surname="NOWAK";
-	cout<<"konstruktor domyœlny.";
-}
-Worker::Worker(int pId, string pName, string pSurname){
-	id=pId;
-	name=pName;
-	surname=pSurname;
+void Worker::getData(){
+	
+	cout << "\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl 
+		 << "                 Dane                " << endl << endl
+		 << "Id: " << id << endl
+		 << "Imiê: " << name << endl
+		 << "Nazwisko: " << surname << endl
+		 << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
+	
 }
 
-void Worker::getData(){
-	cout<<"Id: "<<id<<"\nImiê: "<<name<<"\nNazwisko"<<surname<<endl;
+/*Worker::Worker(){
+	
+	cout << "\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl 
+		 << "Zosta³ wywo³any konstrutktor domyœlny" << endl
+		 << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
+	
+	id = 69;
+	name = "Marek";
+	surname = "Nowak";
+	
+}*/
+
+Worker::Worker(int id, string name, string surname){
+	
+	Worker::id = id;
+	Worker::name = name;
+	Worker::surname = surname;
+	
 }
-int main(){
-	setlocale (LC_CTYPE, "polish");
-	Worker nowak;
-	nowak.getData();
-	Worker nowak1= Worker();
+
+int main(int argc, char** argv) {
+	
+	setlocale(LC_CTYPE, "Polish");
+	
+	Worker spec = Worker();
+	spec.getData();	
+	
+	Worker mareczek = Worker(69, "Marek", "Nowak");
+	mareczek.getData();
+	
+	Worker nicola = Worker(1234, "Nicola");
+	nicola.getData();
+	
 	return 0;
 }
