@@ -18,7 +18,7 @@ Worker::Worker(){
 	id=13;
 	name="KATARZYNA";
 	surname="NOWAK";
-	cout<<"konstruktor domyœlny.";
+	cout<<"konstruktor domyÅ“lny.";
 }
 Worker::Worker(int pId, string pName, string pSurname){
 	id=pId;
@@ -27,7 +27,7 @@ Worker::Worker(int pId, string pName, string pSurname){
 }
 
 void Worker::getData(){
-	cout<<"Id: "<<id<<"\nImiê: "<<name<<"\nNazwisko"<<surname<<endl;
+	cout<<"Id: "<<id<<"\nImiÃª: "<<name<<"\nNazwisko"<<surname<<endl;
 }
 int main(){
 	setlocale (LC_CTYPE, "polish");
