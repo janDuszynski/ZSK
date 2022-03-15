@@ -16,32 +16,33 @@ class Animal{
 };
 class Fish: public Animal{
 	public:
-		virtual void breathe(){
+		 void breathe(){
 			cout<<"(NIE)Oddycha, niesamowite!"<<endl;
 		}
 };
 class Mammal: public Animal{
 	public:
-		virtual voith breathe(){
+		 void breathe(){
 			cout<<"Nie mo Oddechu"<<endl;
 		}
-		virtual void run(){
+		 void run(){
 			cout<<"Biegnij"<<endl;
 		}
 };
 class Bird: public Animal{
 	public:
-		virtual voith breathe(){
+		 void breathe(){
 			cout<<"Oddech aerodynamiczny!"<<endl;
 		}
-		virtual void run(){
-			cout<<"Leæ!"<<endl;
+		 void run(){
+			cout<<"LeÃ¦!"<<endl;
 		}
 };
 int main(){
 	setlocale(LC_CTYPE,"Polish");
-	
+	Mammal zwierze;
+	Animal *wsk = &zwierze;
+	wsk->breathe();
 	
 	return 0;
 }
-
